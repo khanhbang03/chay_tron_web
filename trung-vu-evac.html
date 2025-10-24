@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chạy trốn: Anh Trung & Anh Vũ — Động đất & Bão lũ</title>
+<meta name="description" content="Câu chuyện và hướng dẫn ứng phó động đất và bão lũ của Anh Trung và Anh Vũ. Checklist, bản đồ thoát hiểm và timeline tương tác." />
+<style>
+  :root{
+    --bg:#0f1724; --panel:#0b1220; --accent:#ffb84d; --muted:#9aa7bd; --card:#071028;
+    --glass: rgba(255,255,255,0.03);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071028);color:#e6f0ff}
+  .wrap{max-width:1100px;margin:28px auto;padding:24px}
+  header{display:flex;gap:16px;align-items:center}
+  .brand{
+    display:flex;gap:12px;align-items:center;background:var(--glass);padding:10px 14px;border-radius:12px;
+    box-shadow:0 6px 18px rgba(2,6,23,0.6);
+  }
+  .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#0ea5a0,#2563eb);display:flex;align-items:center;justify-content:center;font-weight:700}
+  h1{margin:0;font-size:1.3rem}
+  .subtitle{color:var(--muted);font-size:0.95rem}
+  main{display:grid;grid-template-columns:1fr 380px;gap:20px;margin-top:20px}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;box-shadow:0 8px 30px rgba(2,8,30,0.6)}
+  .story{line-height:1.6}
+  .timeline{margin-top:14px}
+  .timeline ul{list-style:none;padding:0;margin:0}
+  .timeline li{padding:12px 10px;border-left:3px solid rgba(255,255,255,0.04);margin-left:8px;margin-bottom:12px;position:relative}
+  .timeline li::before{content:"";position:absolute;left:-10px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+  .map-wrap{height:340px;display:flex;flex-direction:column;gap:10px}
+  .svg-map{flex:1;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#071833,#052034);display:flex;align-items:center;justify-content:center;padding:12px}
+  svg{max-width:100%;height:100%}
+  .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  button{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;cursor:pointer}
+  button.primary{background:linear-gradient(90deg,var(--accent),#ff8a4b);color:#052034;border:none}
+  .checklist{margin-top:10px}
+  .checklist ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .checklist li{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+  .print-only{display:none}
+  .tips{margin-top:12px;color:var(--muted);font-size:0.95rem}
+  footer{margin-top:18px;color:var(--muted);font-size:0.9rem;text-align:center}
+  /* responsive */
+  @media (max-width:980px){
+    main{grid-template-columns:1fr; padding-bottom:20px}
+    .logo{width:48px;height:48px}
+    .map-wrap{height:300px}
+  }
+  /* tooltip */
+  .hotspot{cursor:pointer;transition:transform .12s}
+  .hotspot:hover{transform:scale(1.05)}
+  /* printable checklist */
+  @media print{
+    body{background:white;color:black}
+    header, .controls, footer{display:none}
+    .card{box-shadow:none;background:white}
+    .print-only{display:block}
+  }
+</style>
+</head>
+<body>
+<div class="wrap" role="main">
+  <header>
+    <div class="brand" aria-hidden="false">
+      <div class="logo" aria-hidden="true">TV</div>
+      <div>
+        <h1>Anh Trung & Anh Vũ — Chạy trốn: Động đất & Bão lũ</h1>
+        <div class="subtitle">Câu chuyện, timeline và hướng dẫn ứng phó (in được)</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="storyTitle">
+      <h2 id="storyTitle">Câu chuyện — Hành trình thoát hiểm</h2>
+      <p class="story">
+        Vào một buổi chiều mưa lớn, khi báo động bão được nâng cấp và mặt đất rung nhẹ, <strong>Anh Trung</strong> và <strong>Anh Vũ</strong> bắt đầu kế hoạch thoát hiểm đã luyện trước.
+        Website này kể từng bước họ làm: chuẩn bị trước, hành động khi động đất xảy ra (Drop, Cover, Hold), chuyển sang điểm cao an toàn khi lũ dâng, và kết thúc bằng tái định cư tạm thời.
+      </p>
+
+      <div class="timeline" aria-label="Timeline">
+        <h3>Timeline sự kiện</h3>
+        <ul>
+          <li><strong>0:00 — Cảnh báo</strong> — Ứng dụng báo động gửi thông báo: bão sắp đến; Trung kiểm tra balo khẩn cấp.</li>
+          <li><strong>0:12 — Động đất</strong> — Nhà rung, Vũ kéo Trung tới khung cửa an toàn; cả hai cúi xuống che đầu.</li>
+          <li><strong>0:30 — Sau rung lắc</strong> — Kiểm tra vết nứt, tắt van gas, lấy túi khẩn cấp, bật đèn pin.</li>
+          <li><strong>1:15 — Lũ dâng</strong> — Nước bắt đầu tràn vào tầng trệt; họ di chuyển lên điểm cao (nhà hàng xóm tầng 2) theo kế hoạch thoát hiểm.</li>
+          <li><strong>2:00 — Di tản tạm thời</strong> — Họ liên hệ đội cứu hộ, nhận thông tin trung tâm cứu trợ, di chuyển bằng thuyền cứu hộ tới khu an toàn.</li>
+        </ul>
+      </div>
+
+      <div class="tips card" style="margin-top:12px">
+        <h3>Mẹo nhanh</h3>
+        <ol>
+          <li>Động đất: <em>Drop, Cover, Hold</em> — cúi, che đầu, bám chặt.</li>
+          <li>Bão/lũ: luôn có lộ trình thoát lên điểm cao; tránh đi xuyên nước sâu nếu không chắc.</li>
+          <li>Chuẩn bị túi khẩn cấp: nước, thực phẩm khô 3 ngày, đèn pin, pin dự phòng, bộ sơ cứu, thuốc cần thiết.</li>
+        </ol>
+      </div>
+
+      <div style="margin-top:12px">
+        <h3>Checklist khẩn cấp</h3>
+        <div class="checklist">
+          <ul id="checklistItems">
+            <li><label><input type="checkbox"> Nước uống (3L/người/ngày)</label></li>
+            <li><label><input type="checkbox"> Thực phẩm khô</label></li>
+            <li><label><input type="checkbox"> Đèn pin + pin</label></li>
+            <li><label><input type="checkbox"> Radio/điện thoại + sạc dự phòng</label></li>
+            <li><label><input type="checkbox"> Bộ sơ cứu</label></li>
+            <li><label><input type="checkbox"> Khăn, quần áo ấm</label></li>
+            <li><label><input type="checkbox"> Thẻ ID & tiền mặt</label></li>
+            <li><label><input type="checkbox"> Bản đồ/điểm gặp gỡ</label></li>
+          </ul>
+        </div>
+        <div style="margin-top:10px; display:flex; gap:10px;">
+          <button onclick="printChecklist()" class="primary">In checklist</button>
+          <button onclick="saveChecklist()">Tải checklist (JSON)</button>
+          <button onclick="resetChecklist()">Reset</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Right column: map & quick info -->
+    <aside>
+      <div class="card map-wrap" aria-label="Bản đồ thoát hiểm">
+        <h3>Bản đồ thoát hiểm (tương tác)</h3>
+        <div class="svg-map" role="img" aria-label="Bản đồ sơ đồ nhà, sông, điểm cao">
+          <!-- Simple SVG illustrative map -->
+          <svg viewBox="0 0 800 480" id="escapeMap" xmlns="http://www.w3.org/2000/svg" aria-hidden="false">
+            <defs>
+              <linearGradient id="waterGrad" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#60a5fa"/>
+                <stop offset="1" stop-color="#1e3a8a"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="6" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- background -->
+            <rect x="0" y="0" width="800" height="480" fill="#021220"/>
+
+            <!-- river -->
+            <path d="M0 320 C140 280, 260 380, 420 340 C560 310, 720 360, 800 330 L800 480 L0 480 Z" fill="url(#waterGrad)" opacity="0.95"/>
+
+            <!-- hill (point high) -->
+            <g transform="translate(640,80)">
+              <ellipse cx="0" cy="120" rx="180" ry="80" fill="#022c1f"/>
+              <polygon points="-100,120 0,-40 100,120" fill="#064e2b"/>
+              <text x="0" y="40" fill="#cdecd6" font-size="18" text-anchor="middle">Điểm cao</text>
+            </g>
+
+            <!-- houses -->
+            <g id="houses" fill="#e6f0ff" transform="translate(140,260)">
+              <rect x="0" y="0" width="110" height="70" rx="6" fill="#0b2a3a"/>
+              <polygon points="0,0 55,-40 110,0" fill="#06324d"/>
+              <text x="55" y="40" fill="#fff" font-size="12" text-anchor="middle">Nhà A</text>
+            </g>
+            <g id="houses2" fill="#e6f0ff" transform="translate(320,240)">
+              <rect x="0" y="0" width="120" height="80" rx="6" fill="#0b2a3a"/>
+              <polygon points="0,0 60,-45 120,0" fill="#06324d"/>
+              <text x="60" y="45" fill="#fff" font-size="12" text-anchor="middle">Nhà B</text>
+            </g>
+
+            <!-- escape route earthquake (dashed) -->
+            <path id="routeEQ" d="M200 260 L225 220 L270 200 L320 180" stroke="#ffb84d" stroke-width="4" stroke-dasharray="8 6" fill="none" stroke-linecap="round"/>
+            <text x="330" y="170" fill="#ffebc8" font-size="13">Vùng an toàn (khoảng trống)</text>
+
+            <!-- escape route flood (solid arrow) -->
+            <path id="routeFlood" d="M380 240 C430 210, 520 160, 620 120" stroke="#fb7185" stroke-width="5" fill="none" marker-end="url(#arrowHead)"/>
+            <defs>
+              <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+                <path d="M0 0 L10 5 L0 10 z" fill="#fb7185"/>
+              </marker>
+            </defs>
+
+            <!-- hotspots -->
+            <circle class="hotspot" id="hotspotDrop" cx="205" cy="255" r="18" fill="#ffd166" stroke="#fff" stroke-opacity="0.15" />
+            <text x="205" y="255" fill="#001119" font-size="11" text-anchor="middle" dy="4">Động đất</text>
+
+            <circle class="hotspot" id="hotspotFlood" cx="620" cy="120" r="18" fill="#fb7185" stroke="#fff" stroke-opacity="0.12" />
+            <text x="620" y="120" fill="#001119" font-size="11" text-anchor="middle" dy="4">Lũ</text>
+
+            <!-- legend -->
+            <g transform="translate(14,14)">
+              <rect x="0" y="0" width="210" height="92" rx="8" fill="rgba(255,255,255,0.03)"/>
+              <text x="12" y="22" fill="#fff" font-size="13">Chú thích</text>
+              <g transform="translate(12,30)" font-size="12">
+                <rect x="0" y="0" width="12" height="8" fill="#ffb84d"/><text x="20" y="8" fill="#cfe1ff">Lộ trình động đất</text>
+                <g transform="translate(0,18)"><rect x="0" y="0" width="12" height="8" fill="#fb7185"/><text x="20" y="8" fill="#cfe1ff">Lộ trình lũ</text></g>
+                <g transform="translate(0,36)"><rect x="0" y="0" width="12" height="8" fill="#60a5fa"/><text x="20" y="8" fill="#cfe1ff">Sông / Nước</text></g>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div class="controls" role="toolbar" aria-label="Bản đồ điều khiển">
+          <button onclick="showScenario('earthquake')">Kịch bản: Động đất</button>
+          <button onclick="showScenario('flood')">Kịch bản: Bão / Lũ</button>
+          <button onclick="showBoth()">Cả hai</button>
+        </div>
+
+        <div class="tips" id="mapTip" aria-live="polite">
+          Nhấp vào các nút trên để làm nổi bật lộ trình. Bấm vào các vòng (Động đất / Lũ) để xem mẹo nhanh.
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Thông tin nhanh</h3>
+        <p><strong>Điểm gặp gỡ:</strong> Nhà hàng xóm tầng 2 / Điểm cao phía đông</p>
+        <p><strong>Số khẩn cấp (ví dụ):</strong> 113 / 114 / 115</p>
+        <p class="muted" style="color:var(--muted)">Thay đổi số liên lạc theo vùng của bạn trước khi in.</p>
+        <div style="margin-top:8px">
+          <button onclick="downloadHtml()" title="Tải trang hiện tại">Tải trang (.html)</button>
+          <button onclick="alert('Hãy lưu file HTML bằng lệnh Save As trên trình duyệt hoặc chọn Print → Save as PDF')">Hướng dẫn lưu PDF</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <small>Website mẫu — Hãy tùy chỉnh nội dung địa phương & số liên lạc trước khi sử dụng thật.</small>
+  </footer>
+</div>
+
+<script>
+  // Basic interactive behaviors
+  function printChecklist(){
+    window.print();
+  }
+
+  function resetChecklist(){
+    document.querySelectorAll('#checklistItems input[type="checkbox"]').forEach(cb => cb.checked = false);
+  }
+
+  function saveChecklist(){
+    const items = Array.from(document.querySelectorAll('#checklistItems li')).map(li => {
+      const text = li.textContent.trim();
+      const checked = li.querySelector('input')?.checked || false;
+      return {text, checked};
+    });
+    const blob = new Blob([JSON.stringify(items, null, 2)], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'checklist_trung_vu.json'; a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  // Map interactions
+  const routeEQ = document.getElementById('routeEQ');
+  const routeFlood = document.getElementById('routeFlood');
+  const mapTip = document.getElementById('mapTip');
+  function showScenario(s){
+    if(s === 'earthquake'){
+      routeEQ.style.opacity = 1; routeEQ.style.filter = 'drop-shadow(0 0 6px rgba(255,184,77,0.6))';
+      routeFlood.style.opacity = 0.14; routeFlood.style.filter = '';
+      mapTip.textContent = 'Kịch bản: Động đất — nguyên tắc: Drop, Cover, Hold. Di chuyển tới khoảng trống an toàn, tránh cửa sổ.';
+    } else if(s === 'flood'){
+      routeFlood.style.opacity = 1; routeFlood.style.filter = 'drop-shadow(0 0 8px rgba(251,113,133,0.6))';
+      routeEQ.style.opacity = 0.14; routeEQ.style.filter = '';
+      mapTip.textContent = 'Kịch bản: Bão/lũ — di chuyển lên điểm cao; tránh nước chảy xiết; không lái ôtô qua vùng ngập.';
+    }
+  }
+  function showBoth(){
+    routeEQ.style.opacity = 1; routeFlood.style.opacity = 1;
+    routeEQ.style.filter = 'drop-shadow(0 0 6px rgba(255,184,77,0.6))';
+    routeFlood.style.filter = 'drop-shadow(0 0 8px rgba(251,113,133,0.6))';
+    mapTip.textContent = 'Cả hai kịch bản: ưu tiên an toàn, kiểm tra thông tin chính thức, liên hệ cứu trợ khi cần.';
+  }
+  // initial state
+  showBoth();
+
+  // hotspot click handlers
+  document.getElementById('hotspotDrop').addEventListener('click', ()=>{
+    alert('Động đất — Hành động: 1) Cúi xuống (Drop) 2) Che đầu (Cover) 3) Giữ chặt (Hold). 4) Tránh cửa sổ và đồ treo trên cao.');
+  });
+  document.getElementById('hotspotFlood').addEventListener('click', ()=>{
+    alert('Lũ — Nếu nước lên nhanh: di chuyển tới điểm cao, tắt điện/gas nếu an toàn, mang theo túi khẩn cấp, tránh đi qua nước chảy.');
+  });
+
+  // download the current HTML (serialize)
+  function downloadHtml(){
+    const html = '<!doctype html>\\n' + document.documentElement.outerHTML;
+    const blob = new Blob([html], {type: 'text/html'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href=url; a.download='trung-vu-evac.html'; a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  // accessibility: keyboard support for hotspots
+  document.querySelectorAll('.hotspot').forEach(el=>{
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('keydown', e=>{
+      if(e.key === 'Enter' || e.key === ' ') el.click();
+    });
+  });
+</script>
+</body>
+</html>

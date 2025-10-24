@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Nước uống (3L/người/ngày)",
+    "checked": false
+  },
+  {
+    "text": "Thực phẩm khô",
+    "checked": false
+  },
+  {
+    "text": "Đèn pin + pin",
+    "checked": false
+  },
+  {
+    "text": "Radio/điện thoại + sạc dự phòng",
+    "checked": false
+  },
+  {
+    "text": "Bộ sơ cứu",
+    "checked": false
+  },
+  {
+    "text": "Khăn, quần áo ấm",
+    "checked": false
+  },
+  {
+    "text": "Thẻ ID & tiền mặt",
+    "checked": true
+  },
+  {
+    "text": "Bản đồ/điểm gặp gỡ",
+    "checked": false
+  }
+]
